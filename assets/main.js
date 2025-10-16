@@ -23,8 +23,18 @@ const randomNumbersField = document.getElementById("random-numbers");
 // Contenitore dei numeri generati
 const randomNumbers = [];
 
+// Collegamento al blocco da far scomparire
+const timerAndNumbersField = document.getElementById('timer-and-numbers')
+
 // Collegamento alla lista di input nell'HTML
 const inputList = document.getElementById('list-input')
+
+// Totale di tempo per memorizzare
+let clock = 5
+
+// Collegamento al timer dell'HTML
+const timer = document.getElementById('timer')
+timer.innerHTML += clock
 
 /* Generazione randomica dei numeri */
 
@@ -39,9 +49,14 @@ randomNumbersField.innerHTML = randomNumbers;
 
 /* Sostituzione numeri con form */
 
-// Avvio timer
+// Avvio timer per il countdown
+setInterval(() => {
+
+}, 1000)
+
+// Avvio timer la sostituzione dai numeri al form
 setTimeout(() => {
-    randomNumbersField.classList.toggle('d-none')
+    timerAndNumbersField.classList.toggle('d-none')
     inputList.classList.toggle('d-none')
 }, 5000)
 
