@@ -22,8 +22,9 @@ const randomNumbers = []
 
 /* Generazione randomica dei numeri */
 for (let i = 0; i < 5; i++) {
-    
+    randomNumbers.push(getRandomNumber(1, 100))
 }
+console.log(randomNumbers)
 
 /* Inserimento numeri dell'utente */
 
