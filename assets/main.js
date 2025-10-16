@@ -10,10 +10,16 @@ Tools:
 - for
 */
 
+// ==================================================================
+// ==================================================================
+
 /* Inizializzazione funzioni */
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+// ===================================================================
+// ===================================================================
 
 /* Inizializzazione variabili */
 
@@ -30,11 +36,14 @@ const timerAndNumbersField = document.getElementById('timer-and-numbers')
 const inputList = document.getElementById('list-input')
 
 // Totale di tempo per memorizzare
-let clock = 5
+let counterEl = 5
 
 // Collegamento al timer dell'HTML
-const timer = document.getElementById('timer')
-timer.innerHTML += clock
+const counterField = document.getElementById('timer')
+counterField.innerHTML = counterEl
+
+// ====================================================================
+// ====================================================================
 
 /* Generazione randomica dei numeri */
 
@@ -47,10 +56,19 @@ console.log(randomNumbers);
 // Inserimento numeri nell'HTML
 randomNumbersField.innerHTML = randomNumbers;
 
+// ====================================================================
+// ====================================================================
+
 /* Sostituzione numeri con form */
 
 // Avvio timer per il countdown
-setInterval(() => {
+const clock = setInterval(() => {
+    counterEl--
+    counterField.innerHTML = counterEl
+
+    if (counterEl === 0) {
+        clearInterval(clock)
+    }
 
 }, 1000)
 
@@ -59,6 +77,9 @@ setTimeout(() => {
     timerAndNumbersField.classList.toggle('d-none')
     inputList.classList.toggle('d-none')
 }, 5000)
+
+// ====================================================================
+// ====================================================================
 
 /* Inserimento numeri dell'utente */
 
