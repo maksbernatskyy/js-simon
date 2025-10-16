@@ -23,6 +23,9 @@ const randomNumbersField = document.getElementById("random-numbers");
 // Contenitore dei numeri generati
 const randomNumbers = [];
 
+// Collegamento alla lista di input nell'HTML
+const inputList = document.getElementById('list-input')
+
 /* Generazione randomica dei numeri */
 
 // Ciclo di inserimento numeri random
@@ -33,6 +36,14 @@ console.log(randomNumbers);
 
 // Inserimento numeri nell'HTML
 randomNumbersField.innerHTML = randomNumbers;
+
+/* Sostituzione numeri con form */
+
+// Avvio timer
+setTimeout(() => {
+    randomNumbersField.classList.toggle('d-none')
+    inputList.classList.toggle('d-none')
+}, 5000)
 
 /* Inserimento numeri dell'utente */
 
