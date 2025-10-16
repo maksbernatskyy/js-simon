@@ -11,39 +11,39 @@
 </head>
 
 <body>
-    <!--Intestazione-->
-    <header>
-        <h1>Simon Says</h1>
-    </header>
+    <div class="container">
+        <!--Intestazione-->
+        <header>
+            <h1>Simon Says</h1>
+        </header>
 
-    <!--Contenuto-->
-    <main>
-        <!--Blocco di timer e numeri che scompare-->
-        <div id="timer-and-numbers">
-            <!--Timer-->
-            <div class="d-flex">
-                <span class="d-block me-2">Memorizza in:</span>
-                <span id="timer"></span>
+        <!--Contenuto-->
+        <main>
+            <!--Blocco di timer e numeri che scompare-->
+            <div id="timer-and-numbers">
+                <!--Timer-->
+                <div class="d-flex">
+                    <span class="d-block me-2">Memorizza in:</span>
+                    <span id="timer"></span>
+                </div>
+                <!--Numeri random-->
+                <div id="random-numbers"></div>
             </div>
-            <!--Numeri random-->
-            <div id="random-numbers"></div>
-        </div>
 
-        <!--Form-->
-        <form>
-            <div id="list-input" class="d-none">
-                <input type="number" placeholder="Inserisci un numero">
-                <input type="number" placeholder="Inserisci un numero">
-                <input type="number" placeholder="Inserisci un numero">
-                <input type="number" placeholder="Inserisci un numero">
-                <input type="number" placeholder="Inserisci un numero">
-            </div>
-        </form>
-    </main>
-
-
-
-
+            <!--Form-->
+            <form>
+                <div id="list-input" class="d-none d-flex flex-column">
+                    <h2>Inserisci i numeri</h2>
+                    <input type="number" placeholder="Inserisci un numero">
+                    <input type="number" placeholder="Inserisci un numero">
+                    <input type="number" placeholder="Inserisci un numero">
+                    <input type="number" placeholder="Inserisci un numero">
+                    <input type="number" placeholder="Inserisci un numero">
+                </div>
+            </form>
+        </main>
+        
+    </div>
     <!--JavaScript-->
     <script src="./assets/main.js"></script>
 </body>
