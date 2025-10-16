@@ -42,6 +42,9 @@ let counterEl = 5
 const counterField = document.getElementById('timer')
 counterField.innerHTML = counterEl
 
+// Collegamento al form
+const form = document.getElementById('form')
+
 // ====================================================================
 // ====================================================================
 
@@ -82,6 +85,11 @@ setTimeout(() => {
 // ====================================================================
 
 /* Inserimento numeri dell'utente */
+
+// Funzione per mantenere i dati del form
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+})
 
 /* Verifica correttezza numeri */
 
