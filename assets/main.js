@@ -63,6 +63,12 @@ const numbers4Field = document.getElementById("number4");
 // Quinto numero dell'utente
 const numbers5Field = document.getElementById("number5");
 
+// Contatore numeri giusti in pagina
+const counterPage = document.getElementById('counter-check')
+
+// Numeri giusti in pagina
+const numPage = document.getElementById('num-check')
+
 // ====================================================================
 // ====================================================================
 
@@ -127,10 +133,10 @@ form.addEventListener("submit", (event) => {
   }
 
   // Mostro quanti numeri sono corretti
-  console.log(checkCounter);
+  counterPage.innerHTML = `Hai indovinato ${checkCounter} su 5`
 
   // Mostro quali numeri sono corretti
-  console.log(checkNumbers);
+  numPage.innerHTML= `I numeri giusti sono: ${checkNumbers}`
 });
 
 /* Verifica correttezza numeri */
