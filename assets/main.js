@@ -29,6 +29,9 @@ const randomNumbersField = document.getElementById("random-numbers");
 // Contenitore dei numeri generati
 const randomNumbers = [];
 
+// Contenitore dei numeri dell'utente
+const numbers = []
+
 // Collegamento al blocco da far scomparire
 const timerAndNumbersField = document.getElementById('timer-and-numbers')
 
@@ -44,6 +47,21 @@ counterField.innerHTML = counterEl
 
 // Collegamento al form
 const form = document.getElementById('form')
+
+// Primo numero dell'utente
+const numbers1Field = document.getElementById('number1')
+
+// Secondo numero dell'utente
+const numbers2Field = document.getElementById('number2')
+
+// Terzo numero dell'utente
+const numbers3Field = document.getElementById('number3')
+
+// Quarto numero dell'utente
+const numbers4Field = document.getElementById('number4')
+
+// Quinto numero dell'utente
+const numbers5Field = document.getElementById('number5')
 
 // ====================================================================
 // ====================================================================
@@ -89,6 +107,18 @@ setTimeout(() => {
 // Funzione per mantenere i dati del form
 form.addEventListener("submit", (event) => {
     event.preventDefault()
+
+    numbers.push(numbers1Field.value)
+
+    numbers.push(numbers2Field.value)
+
+    numbers.push(numbers3Field.value)
+
+    numbers.push(numbers4Field.value)
+
+    numbers.push(numbers5Field.value)
+
+    console.log(numbers)
 })
 
 /* Verifica correttezza numeri */
