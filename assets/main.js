@@ -38,9 +38,6 @@ let checkCounter = 0;
 // Collegamento al blocco da far scomparire
 const timerAndNumbersField = document.getElementById("timer-and-numbers");
 
-// Collegamento alla lista di input nell'HTML
-const inputList = document.getElementById("list-input");
-
 // Totale di tempo per memorizzare
 let counterEl = 5;
 
@@ -98,7 +95,7 @@ const clock = setInterval(() => {
 // Avvio timer la sostituzione dai numeri al form
 setTimeout(() => {
   timerAndNumbersField.classList.toggle("d-none");
-  inputList.classList.toggle("d-none");
+  form.classList.toggle("d-none");
 }, 5000);
 
 // ====================================================================
@@ -109,8 +106,6 @@ setTimeout(() => {
 // Funzione per mantenere i dati del form
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  // Inserisco i numeri dell'utente in un contenitore
 
   // Contenitore dei numeri dell'utente
   const numbers = [
